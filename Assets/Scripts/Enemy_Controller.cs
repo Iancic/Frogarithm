@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class Enemy_Controller : MonoBehaviour
@@ -8,8 +9,15 @@ public class Enemy_Controller : MonoBehaviour
     private float speed = 20f;
     private float lifetime = 15f;
 
+    public TMP_Text back_Text;
+    public int number_identity = 0;
+
     void Start()
     {
+        number_identity = Random.Range(1, 10);
+        string myString = number_identity.ToString();
+        back_Text.text = myString;
+
         rb = GetComponent<Rigidbody>();
 
         rot_Horizontal = Random.Range(1f, 360f);

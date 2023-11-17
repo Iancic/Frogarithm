@@ -1,4 +1,6 @@
 using System.Collections;
+using System.Drawing;
+using TMPro;
 using UnityEngine;
 
 public class Spawner_Controller : MonoBehaviour
@@ -6,19 +8,12 @@ public class Spawner_Controller : MonoBehaviour
     private float horizontal_Loc;
     private float vertical_Loc;
     public GameObject spawnable;
-
     public float spawnrate = 2f;
 
     void Start()
     {
         StartCoroutine(Spawn());
     }
-
-    void Update()
-    {
-
-    }
-    
     IEnumerator Spawn()
     {
         while (true)
