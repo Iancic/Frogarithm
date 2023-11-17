@@ -26,7 +26,7 @@ public class Spawner_Controller : MonoBehaviour
             horizontal_Loc = Random.Range(-50f, 50f);
             vertical_Loc = Random.Range(0f, 60f);
 
-            Instantiate(spawnable, new Vector3(horizontal_Loc, 0f, vertical_Loc), Quaternion.identity);
+            Instantiate(spawnable, new Vector3(horizontal_Loc, 1f, vertical_Loc), Quaternion.identity);
 
             yield return new WaitForSeconds(spawnrate);
         }
