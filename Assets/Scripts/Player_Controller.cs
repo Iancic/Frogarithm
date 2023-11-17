@@ -1,21 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
     public Rigidbody rb;
-    public Collider2D col;
     public GameObject rotObject;
+
+    public TMP_Text playerText;
 
     private bool isGrounded;
 
+    private float playerNumber;
     private float moveSpeed = 50f;
     private float rotationSpeed = 500f;
     private float jumpForce = 1000f;
 
     private Vector3 movementInput;
     private Vector3 CustomGravity = new Vector3(0, -50, 0);
+
+    void Start()
+    {
+        ChangeNumber();
+    }
 
     void Update()
     {
@@ -54,6 +62,9 @@ public class Player : MonoBehaviour
         // Destroy enemy if in contact with it
         if (col.gameObject.CompareTag("Enemy") && !isGrounded)
         {
+            var enemyFrog = col.gameObject.GetComponent<Enemy_Controller>();
+            playerNumber = enemyFrog.number_identity;
+            ChangeNumber();
             Destroy(col.gameObject);
         }
     }
@@ -80,5 +91,10 @@ public class Player : MonoBehaviour
         // Set the ground check to false
         isGrounded = false;
         rb.AddForce(new Vector3(0, jumpForce, 0));
+    }
+
+    void ChangeNumber()
+    {
+        playerText.text = playerNumber.ToString();
     }
 }
