@@ -12,9 +12,10 @@ public class Player : MonoBehaviour
 
     private float moveSpeed = 50f;
     private float rotationSpeed = 500f;
-    private float jumpForce = 500f;
+    private float jumpForce = 1000f;
 
     private Vector3 movementInput;
+    private Vector3 CustomGravity = new Vector3(0, -50, 0);
 
     void Update()
     {
@@ -33,6 +34,10 @@ public class Player : MonoBehaviour
         // Move and rotate the player
         MovePlayer();
         RotatePlayer();
+        if(rb.velocity.y < 0 || rb.velocity.y > 2)
+        {
+            rb.AddForce(CustomGravity, ForceMode.Acceleration);
+        }
     }
 
     void OnCollisionEnter(Collision collision)
