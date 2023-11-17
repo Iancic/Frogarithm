@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        // Read player input and set 
+        // Read player input and set rotation
         movementInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
         rotObject.transform.position = transform.position + movementInput;
 
@@ -39,6 +39,14 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.CompareTag("Enemy") && !isGrounded)
+        {
+            Destroy(col.gameObject);
+        }
+    }
+
     void MovePlayer()
     {
         Vector3 newPosition = transform.position + movementInput * moveSpeed * Time.fixedDeltaTime;
@@ -56,6 +64,7 @@ public class Player : MonoBehaviour
 
     void Jump()
     {
+        isGrounded = false;
         rb.AddForce(new Vector3(0, jumpForce, 0));
     }
 }
