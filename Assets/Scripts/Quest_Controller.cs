@@ -30,13 +30,11 @@ public class Quest_Controller : MonoBehaviour
 
     private void Update()
     {
-        /*
-        if (ecuation == player.number)
+        if (ecuation == Player.Instance.playerNumber)
         {
-            Player.polywags ++
-            text.text = "'none;
+            Player.Instance.pollywags = Player.Instance.pollywags + 100;
+            text.text = "";
         }
-        */
     }
 
     public void GenerateEcuation()

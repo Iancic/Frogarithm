@@ -12,13 +12,29 @@ public class Player : MonoBehaviour
 
     private bool isGrounded;
 
-    private float playerNumber;
+    public float playerNumber;
     private float moveSpeed = 50f;
     private float rotationSpeed = 500f;
     private float jumpForce = 1000f;
 
     private Vector3 movementInput;
     private Vector3 CustomGravity = new Vector3(0, -50, 0);
+
+    public int pollywags;
+
+    public static Player Instance { get; private set; }
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
+    //Singleton Workflow
 
     void Start()
     {
@@ -66,6 +82,11 @@ public class Player : MonoBehaviour
             playerNumber = enemyFrog.number_identity;
             ChangeNumber();
             Destroy(col.gameObject);
+        }
+
+        if (col.gameObject.CompareTag("Quest") && !isGrounded)
+        {
+            Quest_Controller.Instance.GenerateEcuation();
         }
     }
 
