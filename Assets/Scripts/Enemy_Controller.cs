@@ -6,7 +6,7 @@ public class Enemy_Controller : MonoBehaviour
     private Rigidbody rb;
     private Vector3 movement;
     private float rot_Horizontal;
-    private float speed = 20f;
+    private float speed = 10f;
     private float lifetime = 15f;
 
     public TMP_Text back_Text;
