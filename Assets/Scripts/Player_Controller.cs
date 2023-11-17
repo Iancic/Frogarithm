@@ -15,9 +15,10 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        // Read input in Update
+        // Read player input and set 
         movementInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
         rotObject.transform.position = transform.position + movementInput;
+
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             Jump();
