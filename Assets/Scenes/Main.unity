@@ -175,10 +175,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2616885695495342177, guid: e117dd0c4057b1949adf6f30467e1736, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: c0a5550c88c5f7347884dad117adfd39, type: 2}
     - target: {fileID: 5300137518627517494, guid: e117dd0c4057b1949adf6f30467e1736, type: 3}
       propertyPath: m_Name
       value: Frog
@@ -829,7 +825,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -288.7, y: 191.29}
+  m_AnchoredPosition: {x: -222, y: 171.4}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1013742931
@@ -852,7 +848,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Pollywogs: '
+  m_text: 500
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f407b9acb231bef46a45c1e9741b9471, type: 2}
   m_sharedMaterial: {fileID: -1921678206644258548, guid: f407b9acb231bef46a45c1e9741b9471, type: 2}
@@ -879,8 +875,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26
-  m_fontSizeBase: 26
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1183,7 +1179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1549,7 +1545,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2000735212917007662, guid: 75f5d23a175aa854db83e6d1a4963117, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -26.8
+      value: -35.4
       objectReference: {fileID: 0}
     - target: {fileID: 2000735212917007662, guid: 75f5d23a175aa854db83e6d1a4963117, type: 3}
       propertyPath: m_LocalPosition.z
