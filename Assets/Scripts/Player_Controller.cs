@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public Rigidbody rb;
     public GameObject rotObject;
     public GameObject smoke;
+    public Animator playerAnimator;
     public AudioSource playerAudioSource;
     public AudioClip boingSound;
     public AudioClip frogSound;
@@ -151,6 +152,16 @@ public class Player : MonoBehaviour
         // Move player
         Vector3 newPosition = transform.position + movementInput * moveSpeed * Time.fixedDeltaTime;
         rb.MovePosition(newPosition);
+        if(movementInput != Vector3.zero)
+        {
+            playerAnimator.SetBool("Walk", true);
+            playerAnimator.SetBool("StopWalk", false);
+        }
+        else
+        {
+            playerAnimator.SetBool("Walk", false);
+            playerAnimator.SetBool("StopWalk", true);
+        }
     }
 
     void RotatePlayer()
