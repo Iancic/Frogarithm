@@ -9,6 +9,7 @@ public class Quest_Controller : MonoBehaviour
     public TMP_Text text;
     public int ecuation;
     public int a, b, c;
+    public string myString;
 
     public static Quest_Controller Instance { get; private set; }
 
@@ -43,14 +44,16 @@ public class Quest_Controller : MonoBehaviour
     public void GenerateEcuation()
     {
 
-        //linear ecuation ax + b = c
+        //functie grad I: ecuation ax + b = c
         a = Random.Range(1, 9);
         b = Random.Range(1, 9);
         c = Random.Range(1, 9);
         ecuation = (c - b) / a;
         
-
-        string myString = $"{a}x + {b} = {c}";
+        if (a == 1)
+            myString = $"x + {b} = {c}";
+        else
+            myString = $"{a}x + {b} = {c}";
         text.text = myString;
     }
 
