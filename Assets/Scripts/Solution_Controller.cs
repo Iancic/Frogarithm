@@ -9,11 +9,11 @@ public class Solution_Controller : MonoBehaviour
     private Vector3 movement;
     private float rot_Horizontal;
     private float speed = 12f;
-    private float lifetime = 20f;
+    private float lifetime = 25f;
     public string myString;
 
     public TMP_Text back_Text;
-    public int number_identity = 0;
+    public int number_identity;
 
     void Start()
     {

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1271813806199986135}
   - component: {fileID: 1178841075523842318}
   - component: {fileID: -9079787179380986481}
+  - component: {fileID: -8888485106346954601}
   - component: {fileID: 306644557063519538}
   m_Layer: 0
   m_Name: Solution
@@ -135,6 +136,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-8888485106346954601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3278306671948319361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba45f37eeb155a34faced47305e484aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myString: 
+  back_Text: {fileID: 8548092222203692529}
+  number_identity: 0
 --- !u!114 &306644557063519538
 MonoBehaviour:
   m_ObjectHideFlags: 0

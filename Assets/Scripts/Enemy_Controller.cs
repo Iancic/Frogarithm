@@ -8,15 +8,26 @@ public class Enemy_Controller : MonoBehaviour
     private Vector3 movement;
     private float rot_Horizontal;
     private float speed = 12f;
-    private float lifetime = 20f;
+    private float lifetime = 25f;
     public string myString;
 
     public TMP_Text back_Text;
     public int number_identity = 0;
 
+    int RandomRangeWithoutZero(int min, int max)
+    {
+        int number;
+        do
+        {
+            number = Random.Range(min, max);
+        } while (number == 0);
+
+        return number;
+    }
+
     void Start()
     {
-        number_identity = Random.Range(-6, 6);
+        number_identity = RandomRangeWithoutZero(-10, 10);
 
         if (number_identity >= 0 )
             myString = $"+{number_identity}";

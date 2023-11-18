@@ -14,7 +14,7 @@ public class Quest_Controller : MonoBehaviour
     public string myString;
     public bool difficulty;
 
-    private float timer = 0f, max_time = 25f, time_remaining;
+    private float timer = 0f, max_time = 15f, time_remaining;
 
     public Image timer_UI;
 
@@ -41,7 +41,7 @@ public class Quest_Controller : MonoBehaviour
     private void Update()
     {
         time_remaining = max_time - timer;
-        timer_UI.fillAmount = 1 - (timer / max_time);
+        timer_UI.fillAmount = timer / max_time;
 
         if (timer > 0f)
             timer -= Time.deltaTime;
@@ -51,7 +51,7 @@ public class Quest_Controller : MonoBehaviour
             Player.Instance.pollywags += 100;
             text.text = "";
             ecuation = 0;
-            timer_UI.fillAmount = 0;
+            timer = 0f;
         }
         else if (timer < 0f && ecuation != 999)
         {
@@ -70,9 +70,9 @@ public class Quest_Controller : MonoBehaviour
         if (difficulty == true)
         {
             //functie grad I: ecuation ax + b = c
-            int a = UnityEngine.Random.Range(1, 9);
-            int x = UnityEngine.Random.Range(1, 9); // Random whole number for x
-            int b = UnityEngine.Random.Range(1, 9);
+            int a = UnityEngine.Random.Range(1, 10);
+            int x = UnityEngine.Random.Range(1, 10); // Random whole number for x
+            int b = UnityEngine.Random.Range(1, 10);
             int c = a * x + b; // Calculate c based on a, x, and b
 
             ecuation = x;
