@@ -113,7 +113,7 @@ public class Player : MonoBehaviour
             playerAudioSource.pitch = Random.Range(0.75f, 1.2f);
             playerAudioSource.Play();
             // Add smoke effect
-            var particle = Instantiate(smoke, transform.position, Quaternion.identity);
+            var particle = Instantiate(smoke, transform.position + new Vector3(0f, 1.5f, 0f), Quaternion.identity);
             Destroy(particle.gameObject, 3);
         }
         // Destroy quest frog and create ecuation
@@ -126,7 +126,7 @@ public class Player : MonoBehaviour
             playerAudioSource.pitch = Random.Range(0.75f, 1.2f);
             playerAudioSource.Play();
             // Add smoke effect
-            var particle = Instantiate(smoke, transform.position, Quaternion.identity);
+            var particle = Instantiate(smoke, transform.position + new Vector3(0f, 1.5f, 0f), Quaternion.identity);
             Destroy(particle.gameObject, 3);
         }
     }
