@@ -12,6 +12,9 @@ public class Player : MonoBehaviour
 
     private bool isGrounded;
 
+    private int horizontalChange;
+    private int verticalChange;
+
     public float playerNumber;
     private float moveSpeed = 50f;
     private float rotationSpeed = 500f;
@@ -43,8 +46,10 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        if(transform.position.z < -26.5 )
+
         // Read player input and set rotation
-        movementInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+        movementInput = new Vector3(Input.GetAxisRaw("Horizontal") * horizontalChange, 0, Input.GetAxisRaw("Vertical") * verticalChange);
         rotObject.transform.position = transform.position + movementInput;
         // Read player jump input
         if (Input.GetButtonDown("Jump") && isGrounded)
@@ -87,6 +92,7 @@ public class Player : MonoBehaviour
         if (col.gameObject.CompareTag("Quest") && !isGrounded)
         {
             Quest_Controller.Instance.GenerateEcuation();
+            Destroy(col.gameObject);
         }
     }
 
