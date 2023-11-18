@@ -97,6 +97,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
+            playerAnimator.SetBool("Jump", false);
         }
     }
 
@@ -179,6 +180,7 @@ public class Player : MonoBehaviour
         // Set the ground check to false
         isGrounded = false;
         rb.AddForce(new Vector3(0, jumpForce, 0));
+        playerAnimator.SetBool("Jump", true);
         // Play Boing Sound
         playerAudioSource.clip = boingSound;
         playerAudioSource.pitch = Random.Range(0.75f, 1.2f);
