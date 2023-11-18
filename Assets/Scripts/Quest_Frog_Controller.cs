@@ -9,10 +9,11 @@ public class Quest_Frog_Controller : MonoBehaviour
     private Vector3 movement;
     private float rot_Horizontal;
     private float speed = 12f;
-    private float lifetime = 20f;
+    private float lifetime = 15f;
 
     public TMP_Text back_Text;
     public int number_identity = 0;
+
 
     void Start()
     {

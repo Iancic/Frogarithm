@@ -1,8 +1,9 @@
+using System.Collections;
+using System.Collections.Generic;
 using TMPro;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-public class Enemy_Controller : MonoBehaviour
+public class Solution_Controller : MonoBehaviour
 {
     private Rigidbody rb;
     private Vector3 movement;
@@ -12,24 +13,13 @@ public class Enemy_Controller : MonoBehaviour
     public string myString;
 
     public TMP_Text back_Text;
-    public int number_identity = 0;
-
-    int RandomRangeWithoutZero(int min, int max)
-    {
-        int number;
-        do
-        {
-            number = Random.Range(min, max);
-        } while (number == 0);
-
-        return number;
-    }
+    public int number_identity;
 
     void Start()
     {
-        number_identity = RandomRangeWithoutZero(-10, 10);
+        number_identity = Quest_Controller.Instance.ecuation;
 
-        if (number_identity >= 0 )
+        if (number_identity >= 0)
             myString = $"+{number_identity}";
         else if (number_identity < 0)
             myString = $"{number_identity}";

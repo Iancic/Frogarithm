@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
     private int horizontalChange = 1;
     private int verticalChange = 1;
 
-    public float playerNumber = 1;
+    public float playerNumber = 0;
     private float moveSpeed = 50f;
     private float rotationSpeed = 500f;
     private float jumpForce = 1000f;
@@ -121,6 +121,21 @@ public class Player : MonoBehaviour
         if (col.gameObject.CompareTag("Quest") && !isGrounded)
         {
             Quest_Controller.Instance.GenerateEcuation();
+            Destroy(col.gameObject);
+            // Play Boing Sound
+            playerAudioSource.clip = frogSound;
+            playerAudioSource.pitch = Random.Range(0.75f, 1.2f);
+            playerAudioSource.Play();
+            // Add smoke effect
+            var particle = Instantiate(smoke, transform.position + new Vector3(0f, 1.5f, 0f), Quaternion.identity);
+            Destroy(particle.gameObject, 3);
+        }
+        // Destroy enemy if in contact with it
+        if (col.gameObject.CompareTag("Solution") && !isGrounded)
+        {
+            var enemyFrog = col.gameObject.GetComponent<Enemy_Controller>();
+            playerNumber += Quest_Controller.Instance.ecuation;
+            ChangeNumber();
             Destroy(col.gameObject);
             // Play Boing Sound
             playerAudioSource.clip = frogSound;

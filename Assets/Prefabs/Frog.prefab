@@ -310,7 +310,7 @@ MonoBehaviour:
   boingSound: {fileID: 8300000, guid: be75bad8e32add242b6f86f213002039, type: 3}
   frogSound: {fileID: 8300000, guid: 73b2c0c1254d6c94cbbb11f1d0025542, type: 3}
   playerText: {fileID: 3348315969906103440}
-  playerNumber: 1
+  playerNumber: 0
   pollywags: 0
 --- !u!82 &3818164840920133006
 AudioSource:
