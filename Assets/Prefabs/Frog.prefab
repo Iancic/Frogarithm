@@ -145,10 +145,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1644204817786507493}
   - component: {fileID: 8490324856975966774}
+  - component: {fileID: 1881931577548071154}
   - component: {fileID: 9034676585626683694}
   - component: {fileID: 3572407678239642871}
   - component: {fileID: 594989368246370325}
-  - component: {fileID: 1881931577548071154}
   m_Layer: 0
   m_Name: Frog
   m_TagString: Player
@@ -171,7 +171,7 @@ Transform:
   - {fileID: 8444231905806885602}
   - {fileID: 3412831138962747831}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &8490324856975966774
 Rigidbody:
@@ -200,6 +200,27 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 80
   m_CollisionDetection: 1
+--- !u!135 &1881931577548071154
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5300137518627517494}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 2.1
+  m_Center: {x: 0, y: 2, z: 0}
 --- !u!33 &9034676585626683694
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -265,27 +286,8 @@ MonoBehaviour:
   rb: {fileID: 8490324856975966774}
   rotObject: {fileID: 7576747975873308375}
   playerText: {fileID: 3348315969906103440}
---- !u!135 &1881931577548071154
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5300137518627517494}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 2.1
-  m_Center: {x: 0, y: 2, z: 0}
+  playerNumber: 0
+  pollywags: 0
 --- !u!1 &7576747975873308375
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,8 +6,8 @@ public class Enemy_Controller : MonoBehaviour
     private Rigidbody rb;
     private Vector3 movement;
     private float rot_Horizontal;
-    private float speed = 10f;
-    private float lifetime = 15f;
+    private float speed = 15f;
+    private float lifetime = 25f;
 
     public TMP_Text back_Text;
     public int number_identity = 0;
@@ -40,12 +40,12 @@ public class Enemy_Controller : MonoBehaviour
         transform.position += movement;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Wall"))
+        if (other.gameObject.CompareTag("Wall"))
         {
             // Reflect the movement direction when hitting a wall
-            Vector3 reflectDirection = Vector3.Reflect(transform.forward, collision.contacts[0].normal);
+            Vector3 reflectDirection = Vector3.Reflect(transform.forward, other.transform.forward);
             transform.forward = reflectDirection;
         }
     }

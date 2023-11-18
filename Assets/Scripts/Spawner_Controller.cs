@@ -8,7 +8,7 @@ public class Spawner_Controller : MonoBehaviour
     private float horizontal_Loc;
     private float vertical_Loc;
     public GameObject spawnable;
-    public float spawnrate = 2f;
+    public float spawnrate = 6f;
 
     void Start()
     {

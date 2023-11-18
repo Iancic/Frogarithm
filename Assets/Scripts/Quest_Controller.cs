@@ -34,6 +34,7 @@ public class Quest_Controller : MonoBehaviour
         {
             Player.Instance.pollywags = Player.Instance.pollywags + 100;
             text.text = "";
+            ecuation = 0;
         }
     }
 
