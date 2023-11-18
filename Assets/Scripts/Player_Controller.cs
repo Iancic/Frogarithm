@@ -12,8 +12,8 @@ public class Player : MonoBehaviour
 
     private bool isGrounded;
 
-    private int horizontalChange;
-    private int verticalChange;
+    private int horizontalChange = 1;
+    private int verticalChange = 1;
 
     public float playerNumber;
     private float moveSpeed = 50f;
@@ -46,7 +46,23 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if(transform.position.z < -26.5 )
+        if(transform.position.z < -8 && Input.GetAxisRaw("Vertical") == -1 || transform.position.z > 70 && Input.GetAxisRaw("Vertical") == 1)
+        {
+            verticalChange = 0;
+        }
+        else
+        {
+            verticalChange = 1;
+        }
+
+        if (transform.position.x < -51 && Input.GetAxisRaw("Horizontal") == -1 || transform.position.x > 51 && Input.GetAxisRaw("Horizontal") == 1)
+        {
+            horizontalChange = 0;
+        }
+        else
+        {
+            horizontalChange = 1;
+        }
 
         // Read player input and set rotation
         movementInput = new Vector3(Input.GetAxisRaw("Horizontal") * horizontalChange, 0, Input.GetAxisRaw("Vertical") * verticalChange);
