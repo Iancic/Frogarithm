@@ -49,6 +49,13 @@ public class Quest_Controller : MonoBehaviour
         b = Random.Range(1, 9);
         c = Random.Range(1, 9);
         ecuation = (c - b) / a;
+
+        if ( b > c )
+        {
+            int aux = c;
+            c = b;
+            b = aux;
+        }
         
         if (a == 1)
             myString = $"x + {b} = {c}";

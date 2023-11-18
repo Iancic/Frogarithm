@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -910,8 +910,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Pollywags: '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 19ffa2de2568a66478dfff890534ebed, type: 2}
+  m_sharedMaterial: {fileID: -8320301883690812318, guid: 19ffa2de2568a66478dfff890534ebed, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1268,8 +1268,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 19ffa2de2568a66478dfff890534ebed, type: 2}
+  m_sharedMaterial: {fileID: -8320301883690812318, guid: 19ffa2de2568a66478dfff890534ebed, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1390,6 +1390,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1201573561}
   ecuation: 0
+  a: 0
+  b: 0
+  c: 0
+  myString: 
 --- !u!1 &1819354230
 GameObject:
   m_ObjectHideFlags: 0
