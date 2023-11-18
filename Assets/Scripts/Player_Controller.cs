@@ -7,6 +7,9 @@ public class Player : MonoBehaviour
 {
     public Rigidbody rb;
     public GameObject rotObject;
+    public AudioSource playerAudioSource;
+    public AudioClip boingSound;
+    public AudioClip frogSound;
 
     public TMP_Text playerText;
 
@@ -46,6 +49,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        // player border
         if(transform.position.z < -8 && Input.GetAxisRaw("Vertical") == -1 || transform.position.z > 70 && Input.GetAxisRaw("Vertical") == 1)
         {
             verticalChange = 0;
@@ -54,7 +58,6 @@ public class Player : MonoBehaviour
         {
             verticalChange = 1;
         }
-
         if (transform.position.x < -51 && Input.GetAxisRaw("Horizontal") == -1 || transform.position.x > 51 && Input.GetAxisRaw("Horizontal") == 1)
         {
             horizontalChange = 0;
@@ -103,12 +106,20 @@ public class Player : MonoBehaviour
             playerNumber = enemyFrog.number_identity;
             ChangeNumber();
             Destroy(col.gameObject);
+            // Play Boing Sound
+            playerAudioSource.clip = frogSound;
+            playerAudioSource.pitch = Random.Range(0.75f, 1.2f);
+            playerAudioSource.Play();
         }
-
+        // Destroy quest frog and create ecuation
         if (col.gameObject.CompareTag("Quest") && !isGrounded)
         {
             Quest_Controller.Instance.GenerateEcuation();
             Destroy(col.gameObject);
+            // Play Boing Sound
+            playerAudioSource.clip = frogSound;
+            playerAudioSource.pitch = Random.Range(0.75f, 1.2f);
+            playerAudioSource.Play();
         }
     }
 
@@ -134,6 +145,10 @@ public class Player : MonoBehaviour
         // Set the ground check to false
         isGrounded = false;
         rb.AddForce(new Vector3(0, jumpForce, 0));
+        // Play Boing Sound
+        playerAudioSource.clip = boingSound;
+        playerAudioSource.pitch = Random.Range(0.75f, 1.2f);
+        playerAudioSource.Play();
     }
 
     void ChangeNumber()
