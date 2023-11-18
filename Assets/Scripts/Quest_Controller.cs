@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Quest_Controller : MonoBehaviour
 {
     public TMP_Text text;
     public int ecuation;
+    public int a, b, c;
 
     public static Quest_Controller Instance { get; private set; }
 
@@ -40,8 +42,15 @@ public class Quest_Controller : MonoBehaviour
 
     public void GenerateEcuation()
     {
-        ecuation = Random.Range(1, 9);
-        string myString = ecuation.ToString();
+
+        //linear ecuation ax + b = c
+        a = Random.Range(1, 9);
+        b = Random.Range(1, 9);
+        c = Random.Range(1, 9);
+        ecuation = (c - b) / a;
+        
+
+        string myString = $"{a}x + {b} = {c}";
         text.text = myString;
     }
 
