@@ -172,7 +172,7 @@ Transform:
   - {fileID: 8444231905806885602}
   - {fileID: 3412831138962747831}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &8490324856975966774
 Rigidbody:
@@ -286,11 +286,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 8490324856975966774}
   rotObject: {fileID: 7576747975873308375}
+  smokeEffect: {fileID: 4008126098104578473, guid: 5e7e7f17c6b304742abaf07f967caaab, type: 3}
   playerAudioSource: {fileID: 3818164840920133006}
-  boingSound: {fileID: 8300000, guid: 392dda62d0d4d6e449a68a94d5dc1710, type: 3}
+  boingSound: {fileID: 8300000, guid: be75bad8e32add242b6f86f213002039, type: 3}
   frogSound: {fileID: 8300000, guid: 73b2c0c1254d6c94cbbb11f1d0025542, type: 3}
   playerText: {fileID: 3348315969906103440}
-  playerNumber: 0
+  playerNumber: 1
   pollywags: 0
 --- !u!82 &3818164840920133006
 AudioSource:

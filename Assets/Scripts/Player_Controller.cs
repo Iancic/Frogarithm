@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
     public Rigidbody rb;
     public GameObject rotObject;
+    public GameObject smokeEffect;
     public AudioSource playerAudioSource;
     public AudioClip boingSound;
     public AudioClip frogSound;
@@ -110,6 +111,8 @@ public class Player : MonoBehaviour
             playerAudioSource.clip = frogSound;
             playerAudioSource.pitch = Random.Range(0.75f, 1.2f);
             playerAudioSource.Play();
+            // Add smoke effect
+            Instantiate(smokeEffect, transform.position, Quaternion.identity);
         }
         // Destroy quest frog and create ecuation
         if (col.gameObject.CompareTag("Quest") && !isGrounded)
@@ -120,6 +123,8 @@ public class Player : MonoBehaviour
             playerAudioSource.clip = frogSound;
             playerAudioSource.pitch = Random.Range(0.75f, 1.2f);
             playerAudioSource.Play();
+            // Add smoke effect
+            Instantiate(smokeEffect, transform.position, Quaternion.identity);
         }
     }
 
