@@ -1,4 +1,5 @@
 using TMPro;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Enemy_Controller : MonoBehaviour
@@ -8,14 +9,20 @@ public class Enemy_Controller : MonoBehaviour
     private float rot_Horizontal;
     private float speed = 12f;
     private float lifetime = 20f;
+    public string myString;
 
     public TMP_Text back_Text;
     public int number_identity = 0;
 
     void Start()
     {
-        number_identity = Random.Range(1, 10);
-        string myString = number_identity.ToString();
+        number_identity = Random.Range(-10, 10);
+
+        if (number_identity >= 0 )
+            myString = $"+{number_identity}";
+        else if (number_identity < 0)
+            myString = $"{number_identity}";
+
         back_Text.text = myString;
 
         rb = GetComponent<Rigidbody>();

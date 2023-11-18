@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     private int horizontalChange = 1;
     private int verticalChange = 1;
 
-    public float playerNumber;
+    public float playerNumber = 1;
     private float moveSpeed = 50f;
     private float rotationSpeed = 500f;
     private float jumpForce = 1000f;
@@ -103,7 +103,7 @@ public class Player : MonoBehaviour
         if (col.gameObject.CompareTag("Enemy") && !isGrounded)
         {
             var enemyFrog = col.gameObject.GetComponent<Enemy_Controller>();
-            playerNumber = enemyFrog.number_identity;
+            playerNumber += enemyFrog.number_identity;
             ChangeNumber();
             Destroy(col.gameObject);
             // Play Boing Sound
