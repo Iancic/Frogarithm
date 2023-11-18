@@ -3,21 +3,28 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Quest_Frog_Controller : MonoBehaviour
+public class Solution_Controller : MonoBehaviour
 {
     private Rigidbody rb;
     private Vector3 movement;
     private float rot_Horizontal;
     private float speed = 12f;
-    private float lifetime = 15f;
+    private float lifetime = 20f;
+    public string myString;
 
     public TMP_Text back_Text;
     public int number_identity = 0;
 
-
     void Start()
     {
-        back_Text.text = "?";
+        number_identity = Quest_Controller.Instance.ecuation;
+
+        if (number_identity >= 0)
+            myString = $"+{number_identity}";
+        else if (number_identity < 0)
+            myString = $"{number_identity}";
+
+        back_Text.text = myString;
 
         rb = GetComponent<Rigidbody>();
 

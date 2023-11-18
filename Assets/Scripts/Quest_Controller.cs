@@ -84,6 +84,8 @@ public class Quest_Controller : MonoBehaviour
 
             text.text = myString;
         }
+
+        Spawner_Controller.Instance.Spawn_Solution();
     }
 
 }
