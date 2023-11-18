@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1178841075523842318}
   - component: {fileID: -9079787179380986481}
   - component: {fileID: 4622011580642811847}
+  - component: {fileID: 306644557063519538}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -44,7 +45,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3278306671948319361}
-  m_Mesh: {fileID: -2432090755550338912, guid: 10ed6c40ecb87ef4aa2669ae65d3a0e6, type: 3}
+  m_Mesh: {fileID: -2432090755550338912, guid: 77b40e85b49003c45a56e77e4aa45ba5, type: 3}
 --- !u!23 &1271813806199986135
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -65,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3033667219593020291, guid: b422c3e89c7457e4c912d523ae49c7e7, type: 3}
+  - {fileID: -3033667219593020291, guid: 77b40e85b49003c45a56e77e4aa45ba5, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -150,6 +151,24 @@ MonoBehaviour:
   myString: 
   back_Text: {fileID: 8548092222203692529}
   number_identity: 0
+--- !u!114 &306644557063519538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3278306671948319361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &5118881441028937454
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,8 +341,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: +5
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 19ffa2de2568a66478dfff890534ebed, type: 2}
+  m_sharedMaterial: {fileID: -8320301883690812318, guid: 19ffa2de2568a66478dfff890534ebed, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -383,7 +402,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.9866928, y: 0, z: -0.36174273, w: 1.1688653}
+  m_margin: {x: 0.9866928, y: -1.2548084, z: -0.36174273, w: 1.1688653}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -403,3 +422,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
   fixedSize: 1
+  parentObject: {fileID: 0}
