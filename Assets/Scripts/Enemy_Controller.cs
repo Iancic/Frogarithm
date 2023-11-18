@@ -39,4 +39,14 @@ public class Enemy_Controller : MonoBehaviour
         Vector3 movement = transform.forward * speed * Time.deltaTime;
         transform.position += movement;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            // Reflect the movement direction when hitting a wall
+            Vector3 reflectDirection = Vector3.Reflect(transform.forward, collision.contacts[0].normal);
+            transform.forward = reflectDirection;
+        }
+    }
 }
