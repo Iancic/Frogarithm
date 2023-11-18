@@ -19,12 +19,12 @@ public class Spawner_Controller : MonoBehaviour
     {
         while (true)
         {
-            horizontal_Loc = Random.Range(-50f, 50f);
-            vertical_Loc = Random.Range(0f, 60f);
+            horizontal_Loc = UnityEngine.Random.Range(-50f, 50f);
+            vertical_Loc = UnityEngine.Random.Range(0f, 60f);
 
             Instantiate(spawnable, new Vector3(horizontal_Loc, 1f, vertical_Loc), Quaternion.identity);
 
-            spawnrate = Random.Range(4f, 8f);
+            spawnrate = UnityEngine.Random.Range(4f, 8f);
 
             yield return new WaitForSeconds(spawnrate);
         }
@@ -34,12 +34,12 @@ public class Spawner_Controller : MonoBehaviour
     {
         while (true)
         {
-            horizontal_Loc = Random.Range(-50f, 50f);
-            vertical_Loc = Random.Range(0f, 60f);
+            horizontal_Loc = UnityEngine.Random.Range(-50f, 50f);
+            vertical_Loc = UnityEngine.Random.Range(0f, 60f);
 
             Instantiate(spawnable_quest, new Vector3(horizontal_Loc, 1f, vertical_Loc), Quaternion.identity);
 
-            spawnrate_quest = Random.Range(10f, 15f);
+            spawnrate_quest = 30f;
 
             yield return new WaitForSeconds(spawnrate_quest);
         }

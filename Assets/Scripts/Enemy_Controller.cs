@@ -16,7 +16,7 @@ public class Enemy_Controller : MonoBehaviour
 
     void Start()
     {
-        number_identity = Random.Range(-10, 10);
+        number_identity = Random.Range(-6, 6);
 
         if (number_identity >= 0 )
             myString = $"+{number_identity}";
