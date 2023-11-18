@@ -65,6 +65,8 @@ public class Quest_Controller : MonoBehaviour
 
     public void GenerateEcuation()
     {
+        Player.Instance.playerNumber = 0f;
+
         timer = max_time;
         difficulty = true;
         if (difficulty == true)
@@ -85,7 +87,7 @@ public class Quest_Controller : MonoBehaviour
             text.text = myString;
         }
 
-        Spawner_Controller.Instance.Spawn_Solution();
+        StartCoroutine(Spawner_Controller.Instance.Spawn_Solution());
     }
 
 }

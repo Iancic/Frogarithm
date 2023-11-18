@@ -8,7 +8,7 @@ public class Enemy_Controller : MonoBehaviour
     private Vector3 movement;
     private float rot_Horizontal;
     private float speed = 12f;
-    private float lifetime = 25f;
+    private float lifetime = 10f;
     public string myString;
 
     public TMP_Text back_Text;
