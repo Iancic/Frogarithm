@@ -8,7 +8,7 @@ public class Spawner_Controller : MonoBehaviour
     private float horizontal_Loc;
     private float vertical_Loc;
     public GameObject spawnable, spawnable_quest, spawnable_solution;
-    private float spawnrate = 3f, spawnrate_quest = 15f;
+    private float spawnrate = 4.5f, spawnrate_quest = 15f;
 
     public static Spawner_Controller Instance { get; private set; }
     private void Awake()
@@ -50,6 +50,17 @@ public class Spawner_Controller : MonoBehaviour
         vertical_Loc = UnityEngine.Random.Range(0f, 60f);
 
         Instantiate(spawnable_solution, new Vector3(horizontal_Loc, 1f, vertical_Loc), Quaternion.identity);
+    }
+
+    public void Spawn_3_Numbers()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+        horizontal_Loc = UnityEngine.Random.Range(-50f, 50f);
+        vertical_Loc = UnityEngine.Random.Range(0f, 60f);
+
+        Instantiate(spawnable, new Vector3(horizontal_Loc, 1f, vertical_Loc), Quaternion.identity);
+        }
     }
 
     IEnumerator Spawn_Quest()

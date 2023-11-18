@@ -48,6 +48,7 @@ public class Quest_Controller : MonoBehaviour
 
         if (ecuation == Player.Instance.playerNumber && timer > 0f)
         {
+            Player.Instance.playerNumber = 0f;
             Player.Instance.pollywags += 100;
             text.text = "";
             ecuation = 0;
@@ -88,6 +89,7 @@ public class Quest_Controller : MonoBehaviour
         }
 
         StartCoroutine(Spawner_Controller.Instance.Spawn_Solution());
+        Spawner_Controller.Instance.Spawn_3_Numbers();
     }
 
 }
