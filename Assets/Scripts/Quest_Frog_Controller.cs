@@ -1,7 +1,9 @@
+using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Enemy_Controller : MonoBehaviour
+public class Quest_Frog_Controller : MonoBehaviour
 {
     private Rigidbody rb;
     private Vector3 movement;
@@ -14,9 +16,7 @@ public class Enemy_Controller : MonoBehaviour
 
     void Start()
     {
-        number_identity = Random.Range(1, 10);
-        string myString = number_identity.ToString();
-        back_Text.text = myString;
+        back_Text.text = "?";
 
         rb = GetComponent<Rigidbody>();
 
