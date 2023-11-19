@@ -132,7 +132,7 @@ public class Player : MonoBehaviour
                     Quest_Controller.Instance.GeneratePowerEquation();
                     break;
                 case 3:
-                    Quest_Controller.Instance.GenerateLogarithmicEquation();
+                    Quest_Controller.Instance.GenerateSqrtEquation();
                     break;
                 case 4:
                     Quest_Controller.Instance.GenerateBinary();

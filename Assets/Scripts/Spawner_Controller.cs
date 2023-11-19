@@ -8,7 +8,7 @@ public class Spawner_Controller : MonoBehaviour
     private float horizontal_Loc;
     private float vertical_Loc;
     public GameObject spawnable, spawnable_quest, spawnable_solution;
-    private float spawnrate = 4.5f, spawnrate_quest = 15f;
+    private float spawnrate = 4.5f, spawnrate_quest = 8f;
 
     public static Spawner_Controller Instance { get; private set; }
     private void Awake()

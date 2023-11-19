@@ -33,6 +33,11 @@ public class Quest_Controller : MonoBehaviour
     }
     //Singleton Workflow
 
+    public void Start()
+    {
+        GenerateFunctionEcuation();
+    }
+
     private void Update()
     {
         time_remaining = max_time - timer;
@@ -86,6 +91,9 @@ public class Quest_Controller : MonoBehaviour
 
     public void GeneratePowerEquation()
     {
+        Player.Instance.playerNumber = 0f;
+        Player.Instance.ChangeNumber();
+
         int a = UnityEngine.Random.Range(2, 4);
         int x = UnityEngine.Random.Range(1, 5);
         int c = (int)Mathf.Pow(x, a);
@@ -93,17 +101,7 @@ public class Quest_Controller : MonoBehaviour
         string equation = $"x^{a} = {c}";
         text.text = equation;
 
-        StartCoroutine(Spawner_Controller.Instance.Spawn_Solution());
-        Spawner_Controller.Instance.Spawn_3_Numbers();
-    }
-
-    public void GenerateLogarithmicEquation()
-    {
-        int a = UnityEngine.Random.Range(1, 3); // Keep this small
-        int x = (int)Mathf.Pow(10, a); // Base 10 logarithm
-
-        string equation = $"lg({x}) = {a}";
-        text.text = equation;
+        ecuation = x;
 
         StartCoroutine(Spawner_Controller.Instance.Spawn_Solution());
         Spawner_Controller.Instance.Spawn_3_Numbers();
@@ -111,11 +109,33 @@ public class Quest_Controller : MonoBehaviour
 
     public void GenerateBinary()
     {
+        Player.Instance.playerNumber = 0f;
+        Player.Instance.ChangeNumber();
+
+        int a = UnityEngine.Random.Range(1, 3); // Keep this small
+        int x = (int)Mathf.Pow(10, a); // Base 10 logarithm
+
+        string equation = $"lg({x}) = {a}";
+        text.text = equation;
+
+        ecuation = x;
+
+        StartCoroutine(Spawner_Controller.Instance.Spawn_Solution());
+        Spawner_Controller.Instance.Spawn_3_Numbers();
+    }
+
+    public void GenerateSqrtEquation()
+    {
+        Player.Instance.playerNumber = 0f;
+        Player.Instance.ChangeNumber();
+
         int a = UnityEngine.Random.Range(1, 10);
         int x = a * a;
 
         string equation = $"sqrt({x}) = {a}";
         text.text = equation;
+
+        ecuation = x;
 
         StartCoroutine(Spawner_Controller.Instance.Spawn_Solution());
         Spawner_Controller.Instance.Spawn_3_Numbers();
