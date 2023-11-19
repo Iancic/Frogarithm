@@ -109,7 +109,7 @@ public class Quest_Controller : MonoBehaviour
         Spawner_Controller.Instance.Spawn_3_Numbers();
     }
 
-    public void GenerateRadicalEquation()
+    public void GenerateBinary()
     {
         int a = UnityEngine.Random.Range(1, 10);
         int x = a * a;

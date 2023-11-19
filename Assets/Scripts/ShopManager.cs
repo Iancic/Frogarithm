@@ -31,7 +31,7 @@ public class ShopManager : MonoBehaviour
         Player.Instance.quest_type = 3;
     }
 
-    public void Change_Log()
+    public void Change_Binary()
     {
         Player.Instance.quest_type = 4;
     }
