@@ -33,11 +33,6 @@ public class Quest_Controller : MonoBehaviour
     }
     //Singleton Workflow
 
-    void Start()
-    {
-        GenerateEcuation();
-    }
-
     private void Update()
     {
         time_remaining = max_time - timer;
