@@ -9,6 +9,7 @@ TagManager:
   - Quest
   - Wall
   - Solution
+  - Shroom
   layers:
   - Default
   - TransparentFX
