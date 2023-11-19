@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public Rigidbody rb;
     public GameObject rotObject;
     public GameObject smoke;
+    public GameObject secretHat;
     public Animator playerAnimator;
     public AudioSource playerAudioSource;
     public AudioClip boingSound;
@@ -203,5 +204,10 @@ public class Player : MonoBehaviour
     public void ChangeNumber()
     {
         playerText.text = playerNumber.ToString();
+    }
+
+    public void SecretHat()
+    {
+        secretHat.SetActive(true);
     }
 }
