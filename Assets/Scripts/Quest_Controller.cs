@@ -67,6 +67,7 @@ public class Quest_Controller : MonoBehaviour
     public void GenerateEcuation()
     {
         Player.Instance.playerNumber = 0f;
+        Player.Instance.ChangeNumber();
 
         timer = max_time;
         difficulty = true;

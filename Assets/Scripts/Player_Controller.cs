@@ -187,7 +187,7 @@ public class Player : MonoBehaviour
         playerAudioSource.Play();
     }
 
-    void ChangeNumber()
+    public void ChangeNumber()
     {
         playerText.text = playerNumber.ToString();
     }
