@@ -825,7 +825,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5.799988, y: -53.600006}
+  m_AnchoredPosition: {x: -40.5, y: -58.90001}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1013742931
@@ -875,8 +875,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1221,8 +1221,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 635, y: 497.1}
-  m_SizeDelta: {x: 60, y: 60}
+  m_AnchoredPosition: {x: 652.2, y: 493.3}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1201573559
 GameObject:
@@ -1309,8 +1309,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1541,11 +1541,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2000735212917007662, guid: 75f5d23a175aa854db83e6d1a4963117, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -285.1
+      value: 313.32
       objectReference: {fileID: 0}
     - target: {fileID: 2000735212917007662, guid: 75f5d23a175aa854db83e6d1a4963117, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.6
+      value: -38.2
       objectReference: {fileID: 0}
     - target: {fileID: 2000735212917007662, guid: 75f5d23a175aa854db83e6d1a4963117, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1578,6 +1578,26 @@ PrefabInstance:
     - target: {fileID: 2000735212917007662, guid: 75f5d23a175aa854db83e6d1a4963117, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2081685351100571180, guid: 75f5d23a175aa854db83e6d1a4963117, type: 3}
+      propertyPath: m_text
+      value: Practice
+      objectReference: {fileID: 0}
+    - target: {fileID: 2081685351100571180, guid: 75f5d23a175aa854db83e6d1a4963117, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2081685351100571180, guid: 75f5d23a175aa854db83e6d1a4963117, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2081685351100571180, guid: 75f5d23a175aa854db83e6d1a4963117, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2081685351100571180, guid: 75f5d23a175aa854db83e6d1a4963117, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 5437687521528838641, guid: 75f5d23a175aa854db83e6d1a4963117, type: 3}
       propertyPath: m_hasFontAssetChanged

@@ -8,7 +8,7 @@ public class Spawner_Controller : MonoBehaviour
     private float horizontal_Loc;
     private float vertical_Loc;
     public GameObject spawnable, spawnable_quest, spawnable_solution;
-    private float spawnrate = 4.5f, spawnrate_quest = 8f;
+    private float spawnrate = 3.5f, spawnrate_quest = 8f;
 
     public static Spawner_Controller Instance { get; private set; }
     private void Awake()
@@ -44,7 +44,7 @@ public class Spawner_Controller : MonoBehaviour
 
     public IEnumerator Spawn_Solution()
     {
-        yield return new WaitForSeconds(UnityEngine.Random.Range(1f, 3f));
+        yield return new WaitForSeconds(UnityEngine.Random.Range(1f, 1.5f));
 
         horizontal_Loc = UnityEngine.Random.Range(-50f, 50f);
         vertical_Loc = UnityEngine.Random.Range(0f, 60f);

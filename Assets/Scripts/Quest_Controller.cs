@@ -49,14 +49,14 @@ public class Quest_Controller : MonoBehaviour
         if (ecuation == Player.Instance.playerNumber && timer > 0f)
         {
             Player.Instance.playerNumber = 0f;
-            Player.Instance.pollywags += 100;
+            Player.Instance.pollywags += 250;
             text.text = "";
             ecuation = 0;
             timer = 0f;
         }
         else if (timer < 0f && ecuation != 999)
         {
-            Player.Instance.pollywags -= 500;
+            Player.Instance.pollywags -= 100;
             ecuation = 999;
             text.text = "";
             timer_UI.fillAmount = 0f;
@@ -94,31 +94,16 @@ public class Quest_Controller : MonoBehaviour
         Player.Instance.playerNumber = 0f;
         Player.Instance.ChangeNumber();
 
-        int a = UnityEngine.Random.Range(2, 4);
+        timer = max_time;
+
+        int a = UnityEngine.Random.Range(2, 8);
         int x = UnityEngine.Random.Range(1, 5);
         int c = (int)Mathf.Pow(x, a);
 
-        string equation = $"x^{a} = {c}";
-        text.text = equation;
-
         ecuation = x;
 
-        StartCoroutine(Spawner_Controller.Instance.Spawn_Solution());
-        Spawner_Controller.Instance.Spawn_3_Numbers();
-    }
-
-    public void GenerateBinary()
-    {
-        Player.Instance.playerNumber = 0f;
-        Player.Instance.ChangeNumber();
-
-        int a = UnityEngine.Random.Range(1, 3); // Keep this small
-        int x = (int)Mathf.Pow(10, a); // Base 10 logarithm
-
-        string equation = $"lg({x}) = {a}";
-        text.text = equation;
-
-        ecuation = x;
+        myString = $"x^{a} = {c}";
+        text.text = myString;
 
         StartCoroutine(Spawner_Controller.Instance.Spawn_Solution());
         Spawner_Controller.Instance.Spawn_3_Numbers();
@@ -129,13 +114,16 @@ public class Quest_Controller : MonoBehaviour
         Player.Instance.playerNumber = 0f;
         Player.Instance.ChangeNumber();
 
-        int a = UnityEngine.Random.Range(1, 10);
-        int x = a * a;
+        timer = max_time;
 
-        string equation = $"sqrt({x}) = {a}";
-        text.text = equation;
+        int a = UnityEngine.Random.Range(1, 10);
+        int b = a * a;
+        int x = a;
 
         ecuation = x;
+
+        string equation = $"sqrt({b}) = x";
+        text.text = equation;
 
         StartCoroutine(Spawner_Controller.Instance.Spawn_Solution());
         Spawner_Controller.Instance.Spawn_3_Numbers();

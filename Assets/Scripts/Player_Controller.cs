@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
 
     public int pollywags;
 
-    public int quest_type = 1; //functia de gradul I=1, powers=2, sqrt=3, binary=4
+    public int quest_type = 1; //functia de gradul I=1, powers=2, sqrt=3
 
     public static Player Instance { get; private set; }
     private void Awake()
@@ -133,9 +133,6 @@ public class Player : MonoBehaviour
                     break;
                 case 3:
                     Quest_Controller.Instance.GenerateSqrtEquation();
-                    break;
-                case 4:
-                    Quest_Controller.Instance.GenerateBinary();
                     break;
             }
             Destroy(col.gameObject);
