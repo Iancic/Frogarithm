@@ -30,4 +30,13 @@ public class ShopManager : MonoBehaviour
     {
         Player.Instance.quest_type = 3;
     }
+
+    public void SecretHat()
+    {
+        if(Player.Instance.pollywags >= 1000)
+        {
+            Player.Instance.SecretHat();
+            Player.Instance.pollywags -= 1250;
+        }
+    }
 }

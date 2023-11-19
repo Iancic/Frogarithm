@@ -171,7 +171,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2303696736753583525}
         m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: SecretHat
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1269,7 +1269,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Secret Hat: 1000'
+  m_text: 'Secret Hat: 1250'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f407b9acb231bef46a45c1e9741b9471, type: 2}
   m_sharedMaterial: {fileID: -1921678206644258548, guid: f407b9acb231bef46a45c1e9741b9471, type: 2}
@@ -1308,7 +1308,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: -85.12
+  m_lineSpacing: -12.86
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0

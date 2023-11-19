@@ -1654,6 +1654,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2060964071}
     m_Modifications:
+    - target: {fileID: 1347820988690230956, guid: 75f5d23a175aa854db83e6d1a4963117, type: 3}
+      propertyPath: m_text
+      value: 'Secret Hat: 1250'
+      objectReference: {fileID: 0}
     - target: {fileID: 1965172205280408221, guid: 75f5d23a175aa854db83e6d1a4963117, type: 3}
       propertyPath: m_Name
       value: ShopMenu
@@ -1700,6 +1704,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2000735212917007662, guid: 75f5d23a175aa854db83e6d1a4963117, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775574989251082203, guid: 75f5d23a175aa854db83e6d1a4963117, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
