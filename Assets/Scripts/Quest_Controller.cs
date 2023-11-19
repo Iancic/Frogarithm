@@ -96,7 +96,7 @@ public class Quest_Controller : MonoBehaviour
 
         timer = max_time;
 
-        int a = UnityEngine.Random.Range(2, 8);
+        int a = UnityEngine.Random.Range(2, 4);
         int x = UnityEngine.Random.Range(1, 5);
         int c = (int)Mathf.Pow(x, a);
 
