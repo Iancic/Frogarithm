@@ -64,20 +64,17 @@ public class Quest_Controller : MonoBehaviour
 
     }
 
-    public void GenerateEcuation()
+    public void GenerateFunctionEcuation()
     {
         Player.Instance.playerNumber = 0f;
         Player.Instance.ChangeNumber();
 
         timer = max_time;
-        difficulty = true;
-        if (difficulty == true)
-        {
             //functie grad I: ecuation ax + b = c
             int a = UnityEngine.Random.Range(1, 10);
-            int x = UnityEngine.Random.Range(1, 10); // Random whole number for x
+            int x = UnityEngine.Random.Range(1, 10);
             int b = UnityEngine.Random.Range(1, 10);
-            int c = a * x + b; // Calculate c based on a, x, and b
+            int c = a * x + b;
 
             ecuation = x;
 
@@ -87,7 +84,43 @@ public class Quest_Controller : MonoBehaviour
                 myString = $"{a}x + {b} = {c}";
 
             text.text = myString;
-        }
+
+        StartCoroutine(Spawner_Controller.Instance.Spawn_Solution());
+        Spawner_Controller.Instance.Spawn_3_Numbers();
+    }
+
+    public void GeneratePowerEquation()
+    {
+        int a = UnityEngine.Random.Range(2, 4);
+        int x = UnityEngine.Random.Range(1, 5);
+        int c = (int)Mathf.Pow(x, a);
+
+        string equation = $"x^{a} = {c}";
+        text.text = equation;
+
+        StartCoroutine(Spawner_Controller.Instance.Spawn_Solution());
+        Spawner_Controller.Instance.Spawn_3_Numbers();
+    }
+
+    public void GenerateLogarithmicEquation()
+    {
+        int a = UnityEngine.Random.Range(1, 3); // Keep this small
+        int x = (int)Mathf.Pow(10, a); // Base 10 logarithm
+
+        string equation = $"lg({x}) = {a}";
+        text.text = equation;
+
+        StartCoroutine(Spawner_Controller.Instance.Spawn_Solution());
+        Spawner_Controller.Instance.Spawn_3_Numbers();
+    }
+
+    public void GenerateRadicalEquation()
+    {
+        int a = UnityEngine.Random.Range(1, 10);
+        int x = a * a;
+
+        string equation = $"sqrt({x}) = {a}";
+        text.text = equation;
 
         StartCoroutine(Spawner_Controller.Instance.Spawn_Solution());
         Spawner_Controller.Instance.Spawn_3_Numbers();

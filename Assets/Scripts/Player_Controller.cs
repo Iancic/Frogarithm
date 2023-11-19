@@ -31,6 +31,8 @@ public class Player : MonoBehaviour
 
     public int pollywags;
 
+    public int quest_type = 1; //functia de gradul I=1, powers=2, sqrt=3, logs=4
+
     public static Player Instance { get; private set; }
     private void Awake()
     {
@@ -121,7 +123,21 @@ public class Player : MonoBehaviour
         // Destroy quest frog and create ecuation
         if (col.gameObject.CompareTag("Quest") && !isGrounded)
         {
-            Quest_Controller.Instance.GenerateEcuation();
+            switch(quest_type)
+            {
+                case 1:
+                    Quest_Controller.Instance.GenerateFunctionEcuation();
+                    break;
+                case 2:
+                    Quest_Controller.Instance.GeneratePowerEquation();
+                    break;
+                case 3:
+                    Quest_Controller.Instance.GenerateLogarithmicEquation();
+                    break;
+                case 4:
+                    Quest_Controller.Instance.GenerateRadicalEquation();
+                    break;
+            }
             Destroy(col.gameObject);
             // Play Boing Sound
             playerAudioSource.clip = frogSound;

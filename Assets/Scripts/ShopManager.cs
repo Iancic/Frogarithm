@@ -15,4 +15,24 @@ public class ShopManager : MonoBehaviour
     {
         ShopMenu.SetActive(false);
     }
+
+    public void Change_Function_Grade_I()
+    {
+        Player.Instance.quest_type = 1;
+    }
+
+    public void Change_Power()
+    {
+        Player.Instance.quest_type = 2;
+    }
+
+    public void Change_Sqrt()
+    {
+        Player.Instance.quest_type = 3;
+    }
+
+    public void Change_Log()
+    {
+        Player.Instance.quest_type = 4;
+    }
 }
